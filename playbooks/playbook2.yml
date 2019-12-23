@@ -1,0 +1,64 @@
+
+-
+  name: Play to setup PHP deserialization vuln demo
+  hosts: demo
+  become: yes
+  tasks:
+
+  - name: add php oldschool
+    apt_repository:
+      repo: ppa:ondrej/php
+      update-cache: yes
+
+
+  - name: Install nginx
+    apt:
+      name: nginx
+      #update-cache: yes
+
+  - name: Install apache2
+    apt:
+      name: apache2
+
+  - name: Install php5
+    apt:
+      name: php5.6
+
+  - name: Install php5 apache module
+    apt:
+      name: libapache2-mod-php
+
+  - name: copy php file
+    copy:
+      src: ~/Documents/test.php
+      dest: /var/www/html/test.php
+      mode: 644
+
+  - name: copy nginx file
+    copy:
+      src: ~/Documents/nginx-routes-default
+      dest: /etc/nginx/sites-available/default
+      mode: 644
+
+  - name: reload nginx configuration
+    shell: nginx -s reload
+
+  - name: enable php apache module
+    shell: a2enmod php5.6
+
+  - name: make apache2 listen on 8080
+    lineinfile: dest=/etc/apache2/ports.conf
+                regexp='^Listen'
+                line="Listen 8080"
+
+  - name: restart apache2
+    service: name=apache2 state=restarted
+
+  - name: create uploads directory
+    file:
+      path: /var/www/html/uproar
+      state: directory
+      owner: www-data
+      group: www-data
+      mode: 0775
+
