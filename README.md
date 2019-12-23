@@ -14,3 +14,4 @@ Demo msf module for the contrived example.  This goes inside of your `.msf4` use
 Vulnerable target
 
 # YouTube Dry Run
+https://youtu.be/_30--DXwfQM
