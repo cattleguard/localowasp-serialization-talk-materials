@@ -13,5 +13,8 @@ Demo msf module for the contrived example.  This goes inside of your `.msf4` use
 # test.php - /vulnerable php/
 Vulnerable target
 
+# nginx-default-routes - /nginx/
+Nothing special here for now.  Routes will likely evolve with additional app stacks.
+
 # YouTube Dry Run
 https://youtu.be/_30--DXwfQM
