@@ -17,4 +17,4 @@ Vulnerable target
 Nothing special here for now.  Routes will likely evolve with additional app stacks.
 
 # YouTube Dry Run
-https://youtu.be/_30--DXwfQM
+[https://youtu.be/On5eMVPnn_w](https://youtu.be/On5eMVPnn_w)
