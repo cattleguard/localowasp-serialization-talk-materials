@@ -1,5 +1,5 @@
 # Materials for Local Appsec Talk Covering Serialization Basics via PHP Object Injection
-These artifacts install and setup purposefully vulnerable code for demonstration purposes.  Never install any of this repo's code outside of a lab setting.
+These artifacts install and setup purposefully vulnerable code for demonstration purposes.  **Never** install any of this repo's code outside of a lab setting.
 
 # Ansible Playbooks - /playbooks/
 `playbook.yml` installs python on a clean Ubuntu server.
